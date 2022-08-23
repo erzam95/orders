@@ -1,0 +1,15 @@
+<mat-grid-list cols="4" rowHeight="2:1">
+  <form [formGroup]="orderForm">
+  <mat-grid-tile *ngFor="let product of products">
+    <mat-card>
+      <mat-card-title>{{product.description}}</mat-card-title>
+      <mat-card-subtitle>{{product.price}}€</mat-card-subtitle>
+      <mat-form-field appearance="standard">
+        <mat-label>Quantity</mat-label>
+        <input formControlName="count" matInput>
+      </mat-form-field>
+      <button (click)="addToCart(product)" mat-button>Add to cart</button>
+    </mat-card>
+  </mat-grid-tile>
+  </form>
+</mat-grid-list>

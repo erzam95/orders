@@ -1,0 +1,46 @@
+.dialog__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    cursor: pointer;
+    font-size: 18px;
+    color: #fc3737;
+  }
+}
+
+.dialog__content__wrapper {
+  width: calc(50% - 25px);
+}
+
+.dialog__content__wrapper-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog__content__wrapper-heading {
+  font-style: italic;
+}
+
+.dialog__total {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  font-size: 22px;
+
+  p {
+    margin-right: 5px;
+  }
+}
+
+.dialog__footer {
+  position: absolute;
+  bottom: 40px;
+}

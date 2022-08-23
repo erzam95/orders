@@ -1,0 +1,31 @@
+<div class="white-background-container">
+  <h2 class="mat-title">List of Orders</h2>
+  <table [dataSource]="dataSource" class="mat-elevation-z8" mat-table>
+    <ng-container matColumnDef="id">
+      <th *matHeaderCellDef mat-header-cell> Id</th>
+      <td *matCellDef="let element" mat-cell> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="customer">
+      <th *matHeaderCellDef mat-header-cell> Customer</th>
+      <td *matCellDef="let element" mat-cell> {{element.customerId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="orders">
+      <th *matHeaderCellDef mat-header-cell> No. Items</th>
+      <td *matCellDef="let element" mat-cell> {{element.items.length}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <th *matHeaderCellDef mat-header-cell>Action</th>
+      <td *matCellDef="let element" mat-cell>
+        <button (click)="showOrder(element)" mat-icon-button>
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+    <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+  </table>
+</div>

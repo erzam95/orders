@@ -1,0 +1,12 @@
+<div class="navigation__links">
+  <a [routerLink]="['']">
+    <h3>Orders</h3>
+  </a>
+  <a [routerLink]="['/products']">
+    <h3>Products</h3>
+  </a>
+</div>
+<div class="navigation__cart">
+  <a class="button fancy-button" (click)="showOrder(cart)"><i class="material-icons">shopping_cart</i></a>
+  <a *ngIf="cart" class="button fancy-button"><i class="material-icons circle">circle</i></a>
+</div>
